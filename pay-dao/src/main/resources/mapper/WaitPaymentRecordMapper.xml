@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tn.pay.mapper.WaitPaymentRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tn.pay.module.WaitPaymentRecord">
+        <id column="payment_id" property="paymentId" />
+        <result column="call_flow" property="callFlow" />
+        <result column="out_order_no" property="outOrderNo" />
+        <result column="apply_id" property="applyId" />
+        <result column="trans_no" property="transNo" />
+        <result column="scene_id" property="sceneId" />
+        <result column="product_id" property="productId" />
+        <result column="funds_id" property="fundsId" />
+        <result column="provider_id" property="providerId" />
+        <result column="payment_mode" property="paymentMode" />
+        <result column="channel_id" property="channelId" />
+        <result column="account_name" property="accountName" />
+        <result column="cert_type" property="certType" />
+        <result column="cert_no" property="certNo" />
+        <result column="mobile" property="mobile" />
+        <result column="cust_account" property="custAccount" />
+        <result column="bank_code" property="bankCode" />
+        <result column="bank_name" property="bankName" />
+        <result column="protocol_no" property="protocolNo" />
+        <result column="user_id" property="userId" />
+        <result column="pub_orpri_flag" property="pubOrpriFlag" />
+        <result column="payment_amount" property="paymentAmount" />
+        <result column="payment_status" property="paymentStatus" />
+        <result column="payment_msg" property="paymentMsg" />
+        <result column="order_date" property="orderDate" />
+        <result column="payment_time" property="paymentTime" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        payment_id AS paymentId, call_flow AS callFlow, out_order_no AS outOrderNo, apply_id AS applyId, trans_no AS transNo, scene_id AS sceneId, product_id AS productId, funds_id AS fundsId, provider_id AS providerId, payment_mode AS paymentMode, channel_id AS channelId, account_name AS accountName, cert_type AS certType, cert_no AS certNo, mobile, cust_account AS custAccount, bank_code AS bankCode, bank_name AS bankName, protocol_no AS protocolNo, user_id AS userId, pub_orpri_flag AS pubOrpriFlag, payment_amount AS paymentAmount, payment_status AS paymentStatus, payment_msg AS paymentMsg, order_date AS orderDate, payment_time AS paymentTime, status, create_time AS createTime, update_time AS updateTime
+    </sql>
+
+</mapper>

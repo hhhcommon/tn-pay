@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="pay_payment_channel_init_data" author="Sam">
+        <sql>
+            INSERT INTO pay_payment_channel VALUES ('1', '1', '1', '1', '1', '0', '1', 'baofoo', '100000178', 'abcdefg', '10000001', null, null, null, 'json', '4.0', 'https://paytest.baofoo.com/open-service/query/service.do', '2');
+            INSERT INTO pay_payment_channel VALUES ('2', '1', '1', '1', '1', '1', '1', 'baofoo', '100000178', null, '100000859', 'C:/Users/Sam/Desktop/test/baofoo_pub.cer', 'C:/Users/Sam/Desktop/test/m_pri.pfx', '123456', 'json', '4.0.0', 'https://paytest.baofoo.com/baofoo-fopay/pay/', '2');
+            INSERT INTO pay_payment_channel VALUES ('3', '1', '1', '1', '1', '2', '1', 'baofoo', '100000276', null, '100000990', 'C:/Users/Sam/Desktop/test/bfkey_100000276@@100000990.cer', 'C:/Users/Sam/Desktop/test/bfkey_100000276@@100000990.pfx', '123456', 'json', '4.0.0.0', 'https://vgw.baofoo.com/cutpayment/api/backTransRequest', '2');
+            INSERT INTO pay_payment_channel VALUES ('4', '1', '1', '1', '1', '3', '1', 'baofoo', '100025773', null, '200001173', 'C:/Users/Sam/Desktop/test/bfkey_100025773@@200001173.cer', 'C:/Users/Sam/Desktop/test/bfkey_100025773@@200001173.pfx', '100025773_286941', 'json', '4.0.0.0', 'https://vgw.baofoo.com/cutpayment/protocol/backTransRequest', '2');
+
+            INSERT INTO pay_payment_channel VALUES ('5', '2', '2', '2', '2', '0', '2', 'cib', 'ORG070000000000090070', null, '42820', 'C:/Users/Sam/Desktop/test/pubServer-rsa.cer', 'C:/Users/Sam/Desktop/test/merchant001-rsa.pfx', '222222', null, '1.0.2', 'http://121.201.58.180:16004/diversion/common/merchant', '2');
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tn.pay.mapper.AuthAcctInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tn.pay.module.AuthAcctInfo">
+        <id column="auth_id" property="authId" />
+        <result column="call_flow" property="callFlow" />
+        <result column="scene_id" property="sceneId" />
+        <result column="product_id" property="productId" />
+        <result column="funds_id" property="fundsId" />
+        <result column="provider_id" property="providerId" />
+        <result column="payment_mode" property="paymentMode" />
+        <result column="channel_id" property="channelId" />
+        <result column="cert_type" property="certType" />
+        <result column="cert_no" property="certNo" />
+        <result column="user_name" property="userName" />
+        <result column="mobile" property="mobile" />
+        <result column="bank_account" property="bankAccount" />
+        <result column="bank_name" property="bankName" />
+        <result column="bank_code" property="bankCode" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        auth_id AS authId, call_flow AS callFlow, scene_id AS sceneId, product_id AS productId, funds_id AS fundsId, provider_id AS providerId, payment_mode AS paymentMode, channel_id AS channelId, cert_type AS certType, cert_no AS certNo, user_name AS userName, mobile, bank_account AS bankAccount, bank_name AS bankName, bank_code AS bankCode, create_time AS createTime, update_time AS updateTime, status
+    </sql>
+
+</mapper>

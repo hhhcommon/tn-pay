@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tn.pay.mapper.BindCardInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tn.pay.module.BindCardInfo">
+        <id column="bind_id" property="bindId" />
+        <result column="scene_id" property="sceneId" />
+        <result column="product_id" property="productId" />
+        <result column="funds_id" property="fundsId" />
+        <result column="provider_id" property="providerId" />
+        <result column="channel_id" property="channelId" />
+        <result column="user_id" property="userId" />
+        <result column="bank_account" property="bankAccount" />
+        <result column="user_name" property="userName" />
+        <result column="cert_no" property="certNo" />
+        <result column="mobile" property="mobile" />
+        <result column="bank_code" property="bankCode" />
+        <result column="bank_name" property="bankName" />
+        <result column="cert_type" property="certType" />
+        <result column="bank_card_type" property="bankCardType" />
+        <result column="bank_security_code" property="bankSecurityCode" />
+        <result column="bank_valid_thru" property="bankValidThru" />
+        <result column="cert_valid_thru" property="certValidThru" />
+        <result column="unique_code" property="uniqueCode" />
+        <result column="protocol_code" property="protocolCode" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        bind_id AS bindId, scene_id AS sceneId, product_id AS productId, funds_id AS fundsId, provider_id AS providerId, channel_id AS channelId, user_id AS userId, bank_account AS bankAccount, user_name AS userName, cert_no AS certNo, mobile, bank_code AS bankCode, bank_name AS bankName, cert_type AS certType, bank_card_type AS bankCardType, bank_security_code AS bankSecurityCode, bank_valid_thru AS bankValidThru, cert_valid_thru AS certValidThru, unique_code AS uniqueCode, protocol_code AS protocolCode, create_time AS createTime, update_time AS updateTime, status
+    </sql>
+
+</mapper>

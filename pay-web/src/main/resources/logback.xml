@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds">
+
+    <property name="colorPattern" value="%d{dd-MM-yyyy HH:mm:ss.SSS} | %highlight(%-5p) | %boldMagenta(%50.50c) | %cyan(%-4L) | %m%n" />
+    <property name="filePattern" value="%d{dd-MM-yyyy HH:mm:ss.SSS} | %-5p | %50.50c | %-4L | %m%n" />
+    <property name="filePath" value="D:/log/tn-pay.%d.log" />
+    <property name="charset" value="UTF-8" />
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${colorPattern}</pattern>
+            <!--<charset>${charset}</charset>-->
+        </encoder>
+    </appender>
+
+    <!--每天生成日志的类-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${filePath}</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${filePattern}</pattern>
+            <charset>${charset}</charset>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="info" />
+    <root level="debug">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+
+</configuration>
